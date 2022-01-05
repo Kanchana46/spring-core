@@ -19,6 +19,9 @@ public class App {
 	    //System.out.println(dimension);
 		 
 		 Polygon polygon1 = (Polygon)context.getBean("circle");
-		 polygon1.area();
+		 polygon1.draw();
+		
+		 //Polygon polygon2 = (Polygon)context.getBean("triangle");
+		// polygon2.draw();
 	 }
 }

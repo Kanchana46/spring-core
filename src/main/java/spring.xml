@@ -8,27 +8,66 @@
       http://www.springframework.org/schema/context
       http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 	  <context:component-scan base-package="com.code.Sprf"></context:component-scan>
-	  
 	  <!-- 
 	      <bean id="polygon" class="com.code.Sprf.Circle"></bean>
 	   -->
-	   
 	   <!-- 
 	   	<bean id="dimension" class="com.code.Sprf.Dimension">
 	   		<property name="heightOrRadius" value="5"></property>
 	   </bean>
 	   -->
 	   
-	
 	    <bean id="dimension" class="com.code.Sprf.Dimension">
 	   		<property name="heightOrRadius" value="6"></property>
 	   </bean>
 	 
-	  
-	
 	  <!-- 
 	    <bean id="dimension" class="com.code.Sprf.Dimension">
 	   		<constructor-arg value="8"></constructor-arg>
 	   </bean>
 	    -->
+	    <!-- 
+	    <bean id="triangle" class="com.code.Sprf.Triangle" autowire="byName">
+	  
+	   	    <property name="pA" ref="point1"></property>
+	   		<property name="pB" ref="point2"></property>
+	   		<property name="pC" ref="point3"></property>
+	    
+	   </bean>
+	     -->
+	   
+	   <!-- 
+	   <bean id="pA" class="com.code.Sprf.Point">
+	   		<property name="x" value="0"></property>
+	   		<property name="y" value="0"></property>
+	   </bean>
+	   <bean id="pB" class="com.code.Sprf.Point">
+	   		<property name="x" value="-10"></property>
+	   		<property name="y" value="0"></property>
+	   </bean>
+	   <bean id="pC" class="com.code.Sprf.Point">
+	   		<property name="x" value="10"></property>
+	   		<property name="y" value="0"></property>
+	   </bean>
+	    -->
+	   
+	   <!-- 
+	   <bean id="circle" class="com.code.Sprf.Circle" ></bean>
+	    -->
+	   
+	   <bean id="p" class="com.code.Sprf.Point">
+	   		<qualifier value="cr"></qualifier>
+	   		<property name="x" value="0"></property>
+	   		<property name="y" value="0"></property>
+	   </bean>
+	    
+	   <bean id="q" class="com.code.Sprf.Point">
+	   		<property name="x" value="0"></property>
+	   		<property name="y" value="5"></property>
+	   </bean>
+	    
+	    
+	   <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+	   
+	   
 </beans>
